@@ -1,0 +1,4 @@
+# Optional: install only if you want local pretrained NLI inference.
+# Model weights are downloaded once to the local Hugging Face cache; conversation text is not sent to a hosted inference API.
+sentence-transformers>=3.0,<6.0
+torch>=2.2
