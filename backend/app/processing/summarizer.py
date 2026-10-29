@@ -147,15 +147,16 @@ def build_summary(
     ]
 
     # Only include headings for categories that contain statements.
+    """summary_text = "\n".join(
+        s["text"] for s in retained
+    )"""
     summary_text = "\n".join(
-    s["text"] for s in retained
-    )
-    """category + "\n" + "\n".join(
+        category + "\n" + "\n".join(
             f"- {text}" for text in texts
         )
         for category, texts in sections.items()
         if texts
-    )"""
+    )
 
     return {
         "sections": sections,
